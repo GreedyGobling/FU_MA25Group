@@ -1,10 +1,9 @@
 public class Cell {
-    public char[][] grid = new char[6][6];
+    public int rows;
+    public int cols;
 
-    // Constructor to initialize the grid with cells
-    // do place bombs aldredy or is it done later?
-    // like then guessing a cell
+    public void takeInput(int rowNumber, int colNumber){
+        System.out.println("Input taken: " + rowNumber + ", " + colNumber);
 
-
+    }
 }
-//Cell logic
