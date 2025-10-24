@@ -7,6 +7,26 @@ public class Cell {
     private CellState state = Unreavealed;
     private int count = 0; // Only set on reveal
 
+    public Cell(boolean isMine){
+        this.isMine = isMine;
+    }
+
+    // call methods
+    public boolean isMine(){
+        return isMine;
+    }
+
+    public boolean isRevealed(){
+        return state == Revealed;
+    }
+
+    public boolean isFlagged(){
+        return state == Flagged;
+    }
+
+    public int getCount(){
+        return count;
+    }
 }
 
 //Cell logic
