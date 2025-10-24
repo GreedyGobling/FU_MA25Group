@@ -5,7 +5,7 @@ public class Cell {
 
     private boolean isMine;
     private CellState state = Unreavealed;
-    private int count = 0; // Only set on reveal
+    private int count = 0; // set on reveal
 
     public Cell(boolean isMine){
         this.isMine = isMine;
@@ -25,6 +25,27 @@ public class Cell {
 
     public int getCount(){
         return count;
+    }
+
+    public void reveal() {
+        if (state != Unreavealed) return;
+
+        if (isMine){
+            state = Revealed;
+            return;
+        }
+        //count = getAdjacentNumber()
+        state = Revealed;
+
+    }
+
+    public void flag(){
+        if (state != Unreavealed) return;
+        state = Flagged;
+    }
+
+    private int getAdjacentNumber(){
+        // TODO number logic
     }
 }
 
