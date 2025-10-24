@@ -11,7 +11,6 @@ public class Cell {
         this.isMine = isMine;
     }
 
-    // call methods
     public boolean isMine(){
         return isMine;
     }
