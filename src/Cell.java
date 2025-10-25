@@ -6,6 +6,7 @@ public class Cell {
     public int mines;
     public boolean[][] isMine;
     public int[][] adjacentMines;
+    public double mineDensity = 0.12f;
 
     // COMBO OF Version 1 and 2
     public static CellState Unrevealed = CellState.Unrevealed;
@@ -14,18 +15,20 @@ public class Cell {
 
     // function to spawn and sett // used at start
     // enum states easy to hide and show cell
-    public void starting (int rowNumber, int colNumber){
+    public void starting(int rowNumber, int colNumber){
         this.rows = rowNumber;
         this.cols = colNumber;
-        amountMines(rowNumber, colNumber);
-        this.mines = mines; // function that takes row and col make random amount of mines base of math
-
-        placeMines();
+        mines = amountMines(rowNumber, colNumber);
+        //this.mines = mines; // function that takes row and col make random amount of mines base of math
+        System.out.printf("mines: %d\n", mines);
+        //placeMines();
     }
 
     private int amountMines(int row, int col){
-        int minesToPlace = (row / col) * 100;
-        return mines = minesToPlace;
+    int totalCells = row * col;
+    int mines = (int) Math.round(totalCells * mineDensity);
+    return mines;
+
     }
     // number calculator
 
