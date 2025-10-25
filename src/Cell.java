@@ -41,6 +41,29 @@ public class Cell {
         }
     }
 
+    private void calculateAdjacent(){
+        for (int r = 0; r < rows; r++){
+            for (int c = 0; c < cols; c++){
+                if (isMine[r][c]){
+                    adjacentMines[r][c] = -1; // it's a trap
+                }
+                else {
+                    int count = 0;
+                    for (int dr = -1; dr <= 1; dr++){
+                        for (int dc = -1; dc <= 1; dc++){
+                            int nr = r + dr;
+                            int nc = c + dc;
+                            if (nr >= 0 && nr < rows && nc >= 0 && nc < cols){
+                                if (isMine[nr][nc]){
+                                    count++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 //Cell logic
