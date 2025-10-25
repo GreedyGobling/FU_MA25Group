@@ -1,21 +1,17 @@
 import java.util.Random;
 
 public class Cell {
-    public int rows;
-    public int cols;
-    public int mines;
-    public boolean[][] isMine;
-    public int[][] adjacentMines;
-    public double mineDensity = 0.12f;
-
-    // COMBO OF Version 1 and 2
-    public static CellState Unrevealed = CellState.Unrevealed;
-    public static CellState Revealed = CellState.Revealed;
-    public static CellState Flagged = CellState.Flagged;
+    private int rows;
+    private int cols;
+    private int mines;
+    private boolean[][] isMine;
+    private int[][] adjacentMines;
+    private double mineDensity = 0.12;
+    private CellState[][] states;
 
     // function to spawn and sett // used at start
     // enum states easy to hide and show cell
-    public void starting(int rowNumber, int colNumber){
+    public Cell(int rowNumber, int colNumber){
         this.rows = rowNumber;
         this.cols = colNumber;
         mines = amountMines(rowNumber, colNumber);
