@@ -17,12 +17,16 @@ public class Cell {
     public void starting (int rowNumber, int colNumber){
         this.rows = rowNumber;
         this.cols = colNumber;
+        amountMines(rowNumber, colNumber);
         this.mines = mines; // function that takes row and col make random amount of mines base of math
 
         placeMines();
     }
-    // spawn mines
 
+    private int amountMines(int row, int col){
+        int minesToPlace = (row / col) * 100;
+        return mines = minesToPlace;
+    }
     // number calculator
 
     private void placeMines(){
