@@ -17,7 +17,7 @@ public class Cell {
     public void starting (int rowNumber, int colNumber){
         this.rows = rowNumber;
         this.cols = colNumber;
-        this.mines = mines;
+        this.mines = mines; // function that takes row and col make random amount of mines base of math
 
         placeMines();
     }
@@ -37,6 +37,7 @@ public class Cell {
             }
         }
     }
+
 }
 
 //Cell logic
