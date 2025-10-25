@@ -11,7 +11,7 @@ public class Cell {
 
     // function to spawn and sett // used at start
     // enum states easy to hide and show cell
-    public Cell(int rowNumber, int colNumber){
+    public void initilize(int rowNumber, int colNumber){
         this.rows = rowNumber;
         this.cols = colNumber;
         mines = amountMines(rowNumber, colNumber);

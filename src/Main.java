@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        Cell cell = new Cell(10, 10);
+        Cell cell = new Cell();
+        cell.initilize(10, 10);
 
 
         //test
