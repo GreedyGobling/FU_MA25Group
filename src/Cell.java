@@ -19,12 +19,24 @@ public class Cell {
         this.cols = colNumber;
         this.mines = mines;
 
+        placeMines();
     }
     // spawn mines
 
     // number calculator
 
-    //
+    private void placeMines(){
+        Random random = new Random();
+        int minesPlaced = 0;
+        while (minesPlaced < mines){
+            int r = random.nextInt(rows);
+            int c = random.nextInt(cols);
+            if (!isMine[r][c]){
+                isMine[r][c] = true;
+                minesPlaced++;
+            }
+        }
+    }
 }
 
 //Cell logic
