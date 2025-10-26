@@ -11,16 +11,16 @@ public class Cell {
 
     // function to spawn and sett // used at start
     // enum states easy to hide and show cell
-    public void initilize(int rowNumber, int colNumber) {
+    public void initialize(int rowNumber, int colNumber) {
         this.rows = rowNumber;
         this.cols = colNumber;
         mines = amountMines(rowNumber, colNumber);
         isMine = new boolean[rows][cols];
         adjacentMines = new int[rows][cols];
 
-        for (int r = 0; r < rows; r++) {
+        states = new CellState[rows][cols];
+        for (int r = 0; r < rows; r++) { // set all cells to unrevealed state
             for (int c = 0; c < cols; c++) {
-                states = new CellState[rows][cols];
                 states[r][c] = CellState.Unrevealed;
             }
         }
