@@ -15,9 +15,11 @@ public class Cell {
         this.rows = rowNumber;
         this.cols = colNumber;
         mines = amountMines(rowNumber, colNumber);
-        //this.mines = mines; // function that takes row and col make random amount of mines base of math
-        System.out.printf("mines: %d\n", mines);
-        //placeMines();
+        isMine = new boolean[rows][cols];
+        adjacentMines = new int[rows][cols];
+
+        placeMines();
+        calculateAdjacent();
     }
 
     private int amountMines(int row, int col){
