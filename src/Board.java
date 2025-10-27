@@ -17,7 +17,7 @@ public class Board {
         cellData.initialize(rows, cols);
 
 //get data from cells
-        this.isMine = cellData.checkMines();
+        this.isMine = cellData.getIsMine();
         this.adjacentMines = cellData.getAdjacentMines();
 
         this.revealed = new boolean[rows][cols];
