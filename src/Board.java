@@ -10,7 +10,7 @@ public class Board {
     private int rows;
     private int cols;
 
-    //constructiors
+    //constructiors //
     public Board(int rows, int cols) {
         this.rows = rows;
         this.cols = cols;
