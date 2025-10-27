@@ -24,7 +24,6 @@ public class Cell {
                 states[r][c] = CellState.Unrevealed;
             }
         }
-
         placeMines();
         calculateAdjacent();
     }
@@ -69,6 +68,7 @@ public class Cell {
                             }
                         }
                     }
+                    adjacentMines[r][c] = count;
                 }
             }
         }
