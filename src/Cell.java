@@ -82,6 +82,9 @@ public class Cell {
         return adjacentMines;
     }
 
+    public CellState[][] getStates(){
+        return states;
+    }
 }
 
 //Cell logic

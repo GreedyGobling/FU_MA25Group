@@ -6,7 +6,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         Rules.showWelcome(); // Welcome screen
-        Rules.show();        // Game instructions
+
+        //Rules.show();        // Game instructions
 
         System.out.print("Choose difficulty (1-3): ");
         String choiceInput = sc.nextLine().trim();
@@ -20,8 +21,19 @@ public class Main {
             default -> { rows = 6; cols = 6; }
         }
 
+
+        Cell cell = new Cell();
+        cell.initialize(rows, cols); // Initialize cell with chosen size
         Board board = new Board(rows, cols);
         Game game = new Game(board);
+        Rules.show();// Game instructions
+
+        try {
+            Thread.sleep(3000); // Pause for half a second before starting
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+
         game.start(); // Start the game
 
         sc.close();
