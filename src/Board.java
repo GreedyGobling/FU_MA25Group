@@ -109,11 +109,11 @@ public class Board {
             System.out.print((char) ('a' + r) + "  ");
             for (int c = 0; c < cols; c++) {
                 if (revealAll) {
-                    // Visa allt (vid förlust eller vinst)
-                    if (isMine[r][c]) System.out.print("💣 ");
+//show everything los or winn
+            if (isMine[r][c]) System.out.print("💣 ");
                     else System.out.print(adjacentMines[r][c] + " ");
                 } else {
-                    if (flagged[r][c]) System.out.print(" red flag ");
+                    if (flagged[r][c]) System.out.print("   🚩 ");
                     else if (!revealed[r][c]) System.out.print("⬜ ");
                     else if (isMine[r][c]) System.out.print("💣 ");
                     else {
