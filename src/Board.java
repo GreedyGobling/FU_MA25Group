@@ -10,14 +10,14 @@ public class Board {
     private int rows;
     private int cols;
 
-    //constructiors
+    //constructiors //
     public Board(int rows, int cols) {
         this.rows = rows;
         this.cols = cols;
         cellData.initialize(rows, cols);
 
 //get data from cells
-        this.isMine = cellData.checkMines();
+        this.isMine = cellData.getIsMine();
         this.adjacentMines = cellData.getAdjacentMines();
 
         this.revealed = new boolean[rows][cols];
