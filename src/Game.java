@@ -4,13 +4,14 @@ import java.util.Scanner;
 public class Game {
     private final Board board;
     private boolean gameOver = false;
-
-    public Game(Board board) {
+    private final Scanner scan;
+    public Game(Board board, Scanner scan) {
         this.board = board;
+        this.scan = scan;
     }
 
+
     public void start() {
-        Scanner scan = new Scanner(System.in);
 
         while (!gameOver) {
             board.print(false); // Show board
@@ -56,6 +57,5 @@ public class Game {
             }
         }
 
-        scan.close();
     }
 }
