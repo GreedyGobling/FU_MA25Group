@@ -113,7 +113,7 @@ public class Board {
             if (isMine[r][c]) System.out.print("💣 ");
                     else System.out.print(adjacentMines[r][c] + " ");
                 } else {
-                    if (flagged[r][c]) System.out.print("   🚩 ");
+                    if (flagged[r][c]) System.out.print("🚩");
                     else if (!revealed[r][c]) System.out.print("⬜ ");
                     else if (isMine[r][c]) System.out.print("💣 ");
                     else {
