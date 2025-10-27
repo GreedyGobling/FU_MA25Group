@@ -101,7 +101,7 @@ public class Board {
     public void print(boolean revealAll) {
         System.out.print("   ");
         for (int c = 1; c <= cols; c++) {
-            System.out.print(c + " ");
+            System.out.printf("%3d", c);
         }
         System.out.println();
 
