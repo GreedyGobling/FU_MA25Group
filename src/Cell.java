@@ -73,6 +73,15 @@ public class Cell {
             }
         }
     }
+
+    public boolean[][] getIsMine(){
+        return isMine;
+    }
+
+    public int[][] getAdjacentMines(){
+        return adjacentMines;
+    }
+
 }
 
 //Cell logic
