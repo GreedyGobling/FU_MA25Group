@@ -7,7 +7,6 @@ public class Cell {
     private boolean[][] isMine;
     private int[][] adjacentMines;
     private double mineDensity = 0.12; // default 0.12
-    private CellState[][] states;
 
     // function to spawn and sett // used at start
     // enum states easy to hide and show cell
@@ -18,12 +17,6 @@ public class Cell {
         isMine = new boolean[rows][cols];
         adjacentMines = new int[rows][cols];
 
-        states = new CellState[rows][cols];
-        for (int r = 0; r < rows; r++) { // set all cells to unrevealed state
-            for (int c = 0; c < cols; c++) {
-                states[r][c] = CellState.Unrevealed;
-            }
-        }
         placeMines();
         calculateAdjacent();
     }
@@ -82,9 +75,6 @@ public class Cell {
         return adjacentMines;
     }
 
-    public CellState[][] getStates(){
-        return states;
-    }
 }
 
 //Cell logic
