@@ -41,7 +41,7 @@ public class Main {
             Game game = new Game(board, sc);
             Rules.show();// Game instructions
 
-            try {
+           try {
                 Thread.sleep(3000); // Pause for half a second before starting
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
